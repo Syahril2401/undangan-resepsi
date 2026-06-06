@@ -62,25 +62,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Navigation Active State (Simple Scroll Spy) ---
-    const sections = document.querySelectorAll('.section');
-    const navItems = document.querySelectorAll('.nav-item');
+    // --- Back to Top ---
+    const backToTopBtn = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - sectionHeight / 3)) {
-                current = section.getAttribute('id');
-            }
-        });
+        // Show back to top button when scrolled down 300px
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
 
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href').includes(current)) {
-                item.classList.add('active');
-            }
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 
