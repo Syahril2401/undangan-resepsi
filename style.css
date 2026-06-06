@@ -185,7 +185,7 @@ body {
 .profile-img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .zoom-groom {
     transform: scale(2.8);
-    transform-origin: 53% 45%;
+    transform-origin: 55% 45%;
 }
 .profile-name { font-family: var(--font-script); color: var(--terracotta); font-size: 3.5rem; line-height: 1; margin-bottom: 10px; }
 .parent-name { font-size: 0.85rem; font-weight: 500; line-height: 1.4; padding: 0 20px; }
@@ -228,13 +228,63 @@ body {
 .event-time { font-size: 0.9rem; font-weight: 600; }
 .event-loc-text { font-size: 0.85rem; font-weight: 500; margin-top: 5px; }
 
-/* Location QR */
-.location-box { background: rgba(255,255,255,0.8); padding: 20px; border-radius: 15px; border: 1px dashed var(--terracotta); }
-.location-box h3 { font-family: var(--font-serif); color: var(--terracotta); margin-bottom: 10px; }
-.qr-wrapper { margin: 15px 0; display: flex; justify-content: center; }
-.qr-code { max-width: 180px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.scan-text { font-size: 0.8rem; color: var(--dark-green); font-style: italic; }
-.maps-link { color: var(--terracotta); font-weight: 700; text-decoration: underline; }
+/* Countdown Timer */
+.countdown-container {
+    margin: 25px 0 15px 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(199, 100, 70, 0.3);
+    border-bottom: 1px solid rgba(199, 100, 70, 0.3);
+    width: 100%;
+}
+.countdown-title {
+    font-family: var(--font-serif);
+    color: #580f1c;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.countdown-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.time-box {
+    background: #580f1c; /* Maroon */
+    color: white;
+    width: 65px;
+    height: 75px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.time-box span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.time-box p {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Location */
+.location-box { background: rgba(255,255,255,0.8); padding: 25px 20px; border-radius: 15px; border: 1px dashed var(--terracotta); margin-top: 20px; }
+.location-box h3 { font-family: var(--font-serif); color: var(--terracotta); margin-bottom: 5px; }
+.maps-btn { margin-top: 15px; width: 100%; justify-content: center; background: #580f1c; }
+.maps-btn:hover { background: #3d0a13; }
 
 /* Closing */
 .closing-text { font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
