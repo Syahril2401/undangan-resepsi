@@ -194,7 +194,7 @@ body {
 /* Couple Section */
 .profile-card { margin-bottom: 20px; display: flex; flex-direction: column; align-items: center; }
 .profile-img-wrapper {
-    width: 150px; height: 150px;
+    width: 200px; height: 200px;
     border-radius: 50%;
     padding: 5px;
     border: 2px solid var(--terracotta);
